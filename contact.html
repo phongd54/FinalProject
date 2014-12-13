@@ -1,0 +1,32 @@
+<html class="no-js">
+<head>
+<meta charset="utf-8">
+<title>Pix-Hunter</title>
+<meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body ng-app="PicHunter">
+  <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+        <h3 class="text-muted">Contact Us</h3>
+      </div>
+
+      <div ng-view=""></div>
+
+      <div class="footer">
+      </div>
+    </div>
+<form action="upload.php" method="post"
+      enctype="multipart/form-data"
+      onsubmit="return false;">
+  <fieldset>
+   <center><h3 class="text-muted">We are located on campus at SFSU!</h3></center>
+    <center><h3 class="text-muted">1600 Holloway Ave. San Francisco, CA 94132</h3></center>
+     <center><h3 class="text-muted">(415) 338-1111</h3></center>

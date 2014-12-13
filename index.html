@@ -1,0 +1,73 @@
+<html class="no-js">
+<head>
+<meta charset="utf-8">
+<title>Pix-Hunter</title>
+<meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body ng-app="PicHunter">
+  <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <h3 class="text-muted">Pic Hunter</h3>
+      </div>
+
+      <div ng-view=""></div>
+
+      <div class="footer">
+      </div>
+    </div>
+<form action="upload.php" method="post"
+      enctype="multipart/form-data"
+      onsubmit="return false;">
+  <fieldset>
+    <center><h3 class="text-muted">Upload Your Picture</h3></center>
+    </select> 
+    <center><input type="file" onchange="previewFile()"></center><br>
+<center><img src="" height="200" width="350" alt=""></center>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+    <script src="bower_components/angular-ui-sortable/sortable.js"></script>
+    <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+      <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/about.js"></script>
+<script>
+   function previewFile(){
+       var preview = document.querySelector('img'); //selects the query named img
+       var file    = document.querySelector('input[type=file]').files[0]; //sames as here
+       var reader  = new FileReader();
+
+       reader.onloadend = function () {
+           preview.src = reader.result;
+       }
+
+       if (file) {
+           reader.readAsDataURL(file); //reads the data as a URL
+       } else {
+           preview.src = "";
+       }
+  }
+
+  previewFile();  //calls the function named previewFile()
+  </script>
+  </fieldset>
+</form>
+<center><img src="pictures/thumbsup.jpg" width="200" height="100" onclick="alert('Your Picture Has Been Hunted!!');"/></center>
+</body>

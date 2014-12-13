@@ -1,0 +1,30 @@
+<html class="no-js">
+<head>
+<meta charset="utf-8">
+<title>Pix-Hunter</title>
+<meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body ng-app="PicHunter">
+  <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <h3 class="text-muted">About Us</h3>
+      </div>
+
+      <div ng-view=""></div>
+
+      <div class="footer">
+      </div>
+    </div>
+<form action="upload.php" method="post"
+      enctype="multipart/form-data"
+      onsubmit="return false;">
+  <fieldset>
+  <center><h3 class="text-muted">Our main goal for doing this project is to explore new possibilities for building an application where users can upload their images onto the site and have others rate it. We want more users to participate with uploading pictures by giving them an incentive of a cash prize, as well as having your work out there in the public to boost your own fame. Even if you don’t use the website for that purpose, there are many other reasons to utilize the website; like sharing photos with friends and families.</h3></center>
